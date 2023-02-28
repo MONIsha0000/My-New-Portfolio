@@ -215,7 +215,7 @@
     </section>
 
     <!-- contact details -->
-    <section class="contact section" id="contact">
+    <!-- <section class="contact section" id="contact">
         <h2 class="section-title" data-aos="fade-down">Contact Me</h2>
 
         <div class="contact_container bd_grid">
@@ -233,6 +233,33 @@
 
             <input type="button" value="Send" class="control_button button" data-aos="fade-right"/>
           </form>
+        </div>
+      </section> -->
+
+      <section class = "contact section">
+        <div id = "contact">
+            <div class = "contact_container bd_grid">
+                <div class="row"><div class="contact-left">
+                    <h2 class = "contact_subtitle" data-aos="fade-down">Contact Me</h2>
+                    <p data-aos="fade-down" data-aos-delay="300"><i class='bx bx-mail-send' data-aos="fade-down" data-aos-delay="300"></i>monisham.0108@gmail.com</p>
+                    <p data-aos="fade-down" data-aos-delay="300"><i class='bx bxs-phone-call' data-aos="fade-down" data-aos-delay="300"></i> 9042257744</p>
+                    <div class="social-icons"><br>
+                        <a href="https://www.linkedin.com/in/monisha-m-582429215" ><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="https://github.com/MONIsha0000"><i class='bx bxl-github'></i></a>
+                    </div><br>
+                    <a href = "My Resume.pdf" download class = "btn btn2">Download CV</a>
+                </div><br>
+                <div class="row">
+                <div class="contact-right">
+                    <form name = "submit-to-google-sheet">
+                        <input type = "text" name = "Name" placeholder="Your Name" required>
+                        <input type = "email" name = "Email" placeholder="Your Email" required>
+                        <textarea name = "Message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class = "btn btn2">Send</button>
+                    </form><br>
+                </div>
+            </div>
+            </div>
         </div>
       </section>
 
@@ -258,5 +285,17 @@
             once: false
         });
       </script>
+
+      <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxh35deNry0FjI0x0DAJC5AjPk8_gIWkAt0627vyw0fjTlH8H2ASpqufN5Z_m26PrjwzA/exec'
+  const form = document.forms ['submit-to-google-sheet']
+
+  form.addEventListener ('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>

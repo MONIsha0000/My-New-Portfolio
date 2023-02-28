@@ -511,25 +511,83 @@ body{
 
 /* contact */
 
-.control_input {
-    width: 100%;
-    font-size: var(--nomral-font-size);
-    font-weight: var(--font-semi);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1.5px solid var(--second-color);
-    outline: none;
+.contact_container{
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.contact_subtitle{
     margin-bottom: var(--mb-4);
-  }
-  
-  .control_button {
-    display: block;
-    border: none;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    margin-right: 15px;
+    font-size: var(--font-semi);
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: var(--font-semi);
+    display: inline-block;
+    color: var(--second-color);
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: grey;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background-color: rgb(167, 87, 167);
+    color: black;
+    padding: 10px 35px;
     outline: none;
-    font-size: var(--nomral-font-size);
+    font-weight: var(--font-semi);
+    border-radius: 0.5rem;
+}
+
+.btn.btn2:hover{
     cursor: pointer;
-    margin-left: auto;
-  }
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline:auto;
+    padding: 15px;
+    margin: 15px;
+    color: var(--second-color);
+    font-size: var(--font-semi);
+    border-radius: 6px;
+}
+
+form btn2{
+    padding: 14px 60px;
+    font-size: var(--font-semi);
+    margin-top: 20px;
+    cursor: pointer;
+}
 
 /* footer */
 .footer{
